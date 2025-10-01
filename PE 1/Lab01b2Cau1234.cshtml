@@ -1,0 +1,177 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>HMT</title>
+</head>
+<body>
+    <div>
+        <h1> CÂU 1</h1>
+        <table border="1" cellpadding="5" cellspacing="5" width="100" height="100">
+            <tr>
+                <td rowspan="3">
+                    Danh sách các mục liên kết
+                </td>
+                <td colspan="2">
+                    Logo
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="2">
+                    Nội dung 1
+                </td>
+                <td>
+                    Nội dung 2
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Nội dung 3
+                </td>
+            </tr>
+        </table>
+
+        <h1> CÂU 2</h1>
+
+
+        <table style="text-align:center " border="1" width="200" cellspacing="0">
+            <tr>
+                <td colspan="2" height="25">A</td>
+            </tr>
+            <tr>
+                <td width="25" height="100">B</td>
+                <td>C</td>
+            </tr>
+        </table>
+
+        <h2>----------------------------------------------- </h2>
+        <table style="text-align:center" border="1" width="200" cellspacing="0">
+            <tr>
+                <td colspan="2" height="25">a</td>
+            </tr>
+            <tr>
+                <td height="100">b</td>
+                <td width="25">c</td>
+            </tr>
+        </table>
+        <h2>---------------------------------------------------------</h2>
+        <table style="text-align:center " border="1" width="200" cellspacing="0">
+            <tr>
+                <td colspan="2" height="25">a</td>
+            </tr>
+            <tr>
+                <td height="100">b</td>
+                <td width="25">c</td>
+            </tr>
+            <tr>
+                <td colspan="2" height="25">d</td>
+            </tr>
+        </table>
+        <h2>---------------------------------------------------------</h2>
+        <table style="text-align:center" border="1" width="200" cellspacing="0">
+            <tr>
+                <td colspan="2" height="40">a</td>
+            </tr>
+            <tr>
+                <td colspan="2" height="25">b</td>
+            </tr>
+            <tr>
+                <td width="40" height="150">c</td>
+                <td>d</td>
+            </tr>
+        </table>
+        <h2>--------------------------------------------------------</h2>
+
+        <table style="text-align:center" border="1" width="250" cellspacing="0">
+            <tr>
+                <td width="50">a</td>
+                <td>b</td>
+            </tr>
+            <tr>
+                <td colspan="2" height="10">c</td>
+            </tr>
+            <tr>
+                <td width="40" height="150">d</td>
+                <td>e</td>
+            </tr>
+        </table>
+        <h2>--------------------------------------------------</h2>
+        <table style="text-align:center" border="1" width="300" cellspacing="0">
+            <tr>
+                <td width="150">a</td>
+                <td colspan="2">b</td>
+            </tr>
+            <tr>
+                <td>c</td>
+                <td>d</td>
+                <td width="20">e</td>
+            </tr>
+            <tr>
+                <td colspan="3" height="20">f</td>
+            </tr>
+        </table>
+        <h6>lỗi vì c và a cùng tỉ lệ , ko làm như ảnh đc ???</h6>
+        <h1>CÂU 3</h1>
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            .wrapper {
+                width: 800px;
+                margin: 20px auto;
+                border: 1px solid #333;
+            }
+
+            .header {
+                height: 80px;
+                background: #ccc;
+            }
+
+            .main {
+                display: flex; /* xếp ngang */
+            }
+
+            .sidebar {
+                width: 200px;
+                background: #eee;
+            }
+
+            .content {
+                flex: 1; /* chiếm phần còn lại */
+                background: #fafafa;
+            }
+        </style>
+        <div class="wrapper">
+            <div class="header">a</div>
+            <div class="main">
+                <div class="sidebar">b</div>
+                <div class="content">c</div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+</body>
+</html>
