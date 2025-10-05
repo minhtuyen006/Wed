@@ -1,0 +1,77 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>PE1_CSS</title>
+    <style>
+        table {
+            border: 5px groove aqua;
+            border-collapse: collapse;           
+            width: 500px;
+            height: 350px;
+            text-align: center;
+            font-style:oblique;           
+        }      
+        th.header1 {
+            background-color: black;
+            color: white;
+        }
+
+        td:first-child {
+            background-color: blue;
+            color: white;
+            font: italic;
+        }
+        td{
+            border-bottom: 2px solid aqua;
+        }
+
+        td.colum {
+            background-color: cadetblue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <table >
+        <tr >
+            <th class="header1"> header 1 </th>
+            <th class="header1"> header 2 </th>
+            <th class="header1"> header 3 </th>
+            <th class="header1"> header 4 </th>
+        </tr>
+        <tr  >
+            <td > column 1 </td>
+            <td class="colum" > column 2 </td>
+            <td class="colum"> column 3 </td>
+            <td class="colum"> column 4 </td>
+        </tr>
+        <tr >
+            <td> column 1 </td>
+            <td class="colum" >  column 2 </td>
+            <td class="colum"> column 3 </td>
+            <td class="colum"> column 4 </td>
+        </tr>
+        <tr>
+            <td> column 1 </td>
+            <td class="colum"> column 2 </td>
+            <td class="colum"> column 3 </td>
+            <td class="colum"> column 4 </td>
+        </tr>
+        <tr>
+            <td> column 1 </td>
+            <td class="colum"> column 2 </td>
+            <td class="colum"> column 3 </td>
+           
+            <td class="colum"> column 4 </td>
+        </tr>
+    </table>
+    </div>
+</body>
+</html>
