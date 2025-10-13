@@ -1,0 +1,215 @@
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>TRANG ĐỊA CHỈ GIAO HÀNG</title>
+
+    <style>
+        body
+        {
+            background-color:beige;
+        }
+        h2{color:white}
+        table.anh {
+            background-color: black;
+            width:100%;
+            margin: 0;
+        
+        }
+      
+        td.header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100vw;
+        }
+        img {
+            height:60px;
+            width:70px;
+        }
+        .changecss {
+            color:blue;
+            border:none;
+
+        }
+        .edit {
+            display: none;
+        }
+        .hang1 {
+            display: flex;
+            border: 5px solid black;
+            justify-content: space-between;                  
+            align-items: center;
+        }
+        h2.toa1{
+            color:black;
+        }
+        .from-line {
+            display: flex;
+            justify-content:left;
+            align-items: center;
+        }
+        .gift {
+            display: none;          
+            justify-content: left;
+            align-items: center;
+            padding-left:20%;
+        }
+        .sanpham{
+            padding-left : 20%;
+            border:none;
+            
+        }
+        .nhap{
+            padding-left:20%;
+        }
+        .edit
+        {
+            padding-left:20%;
+        }
+        .thanhtoan {
+            background-color: darkorange;
+            text-align: center;
+            display: block; 
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+        .Giatien{
+            display:none;
+            
+        }
+    </style>
+
+</head>
+<body>
+    <div>
+        <table class="anh">
+            <tr class="header">
+                <td class="header">
+                    <img src="https://www.shutterstock.com/image-vector/amazon-logo-editorial-icon-isolated-600nw-2333488123.jpg" alt="loi" />
+                    <h2>Secure checkout</h2>            
+                    <img src="https://thumb.ac-illust.com/cf/cf2fcb52808dd0eb873bfe2ce2ab41a8_t.jpeg" alt="error" />
+                </td>
+            </tr>
+        </table>
+    </div> 
+        <div class="nhap">         
+            <p>Delivering to : <span id="showName"> anh/chị </span></p>
+            <p>  <span id="showAddress">chưa có địa chỉ</span></p>
+            <button class="changecss" onclick="change()">Change</button>
+        </div>
+
+       
+        <div id="editForm" class="edit">
+            <h4>Cập nhật thông tin</h4>
+            <input type="text" id="nameInput" placeholder="Nhập họ và tên"> @*placeholder là chữ mờ mờ trước khi nhập liệu*@
+            <input type="text" id="addressInput" placeholder="Nhập địa chỉ">
+            <button onclick="updateInfo()">Cập nhật</button>
+            <button onclick="hideForm()">Hủy</button>
+        </div>
+
+        <script>
+            /// tìm thằng có id edit , hiện ra màn hình = display = block
+            function change() {
+                document.getElementById('editForm').style.display = 'block'; 
+            }
+
+            function hideForm() {
+                document.getElementById('editForm').style.display = 'none';
+            }
+
+            // Cập nhật thông tin
+            function updateInfo() {
+                let name = document.getElementById('nameInput').value;
+                let address = document.getElementById('addressInput').value;
+
+                if (name === '' || address === '') {
+                    alert('Vui lòng nhập đầy đủ thông tin!');
+                    return;
+                }
+
+                document.getElementById('showName').innerText = name;
+                document.getElementById('showAddress').innerText = address;
+
+                hideForm(); // ẩn form sau khi cập nhật
+            }
+        </script>
+        <div class="sanpham">
+            <div><h2 class="toa1">Choose gift options</h2></div>
+            <div class="Hang1">
+                <img src="https://m.media-amazon.com/images/I/81n1T4CYfmL._AC_SX466_.jpg" alt="error" />
+                <i>ASUS ROG Strix G16 (2025) Gaming Laptop</i><br />
+                <i> Intel® Core™ i7 Processor 14650HX, 16GB DDR5, 1TB Gen 4 SSD, Wi-Fi 7, Windows 11 Home</i><br />
+                <input type="checkbox" class="checkqua" onclick="CheckQua();" /> This item is a gift
+            </div>
+            <div class="Hang2">
+                <img src="https://m.media-amazon.com/images/I/71PHgAxiCnL._AC_SX466_.jpg" />
+                <i>Samsung 24-Inch Odyssey G3 (G30D) Series FHD Gaming Monitor</i>
+                <i>1ms, 180Hz, AMD FreeSync, Adjustable Stand, Black Equalizer, Virtual Aim Point, Eye Saver Mode, Flicker-Free, LS24DG302ENXZA</i><br />
+                <input type="checkbox" class="checkqua" onclick="CheckQua();" /> This item is a gift
+            </div>
+            <div>
+                <img src="https://m.media-amazon.com/images/I/815SCEEUyhL._AC_SY300_SX300_QL70_FMwebp_.jpg" />
+                <i>ODK Reversible Gaming Desk LED Lights</i><br />
+                <i> 40 Inch Computer Desk with Storage Shelves & Monitor Stand</i><br />
+                <input type="checkbox" class="checkqua" onclick="CheckQua();" /> This item is a gift
+            </div>
+            @**********************************************************************@
+            @**********************************************************************@
+            @**********************************************************************@
+        </div>
+    <div  id="gift" class="gift">   
+              
+        <h1>Gift messenger</h1>
+        <textarea placeholder="Enjoy your gift!"></textarea>
+        <div class="from-line">
+            <label>From <span>*</span></label>
+            <b>HMT</b><br />
+        </div>
+        
+        
+            <h1>Add ons</h1>
+            <input type="checkbox" id="check01" onclick="tuiqua();" /> Wrap in gift bag - $4.49 <br />
+            <img src="https://png.pngtree.com/png-vector/20250702/ourmid/pngtree-green-leaf-printed-tote-bag-3d-eco-friendly-design-png-image_16598361.webp" /><br />
+            <input type="checkbox" id="check02" onclick="Guiemail();" />Email the recipient a copy of their gift receipt after the gift is delivered <br />
+            <input type="text" id="textextra1" />
+        
+    </div>
+    <script language="javascript" >
+        function CheckQua() {
+            let ch1 = document.querySelectorAll('.checkqua');
+            let ch2 = document.getElementById('gift');
+
+            // Nếu được tích thì hiện bảng, ngược lại ẩn
+            let anyChecked = Array.from(ch1).some(chk => chk.checked);
+
+            ch2.style.display = anyChecked ? 'block' : 'none';
+        }
+    </script>
+    
+        <input type="button" id="thanhtoan" value="Save gift options" class="thanhtoan" onclick="Thanhtoan();" />
+    
+    <div id="Giatien" class="Giatien">
+        Items(6) <input type="button" value="___" id="giatien1" /><br />
+        Shipping <input type="button" value="___ " id="giatien2" /><br />
+        Estimated <input type="button" value="___" id="giatien3" /><br />
+        Import Charger <input type="button" value="___" id="giatien4" /><br />
+        <b>Order total</b> <input type="button" value="$511.83" id="tien" />
+
+    </div>
+    <script language="javascript">
+        function Thanhtoan() {
+            document.getElementById('Giatien').style.display = 'block'; 
+        }
+        
+    </script>
+
+</body>
+</html>
+
+
